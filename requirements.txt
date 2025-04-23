@@ -1,3 +1,18 @@
+# # FastAPI framework and ASGI server
+# fastapi
+# uvicorn
+
+# # Coqui TTS library
+# TTS==0.22.0 
+
+# # Audio manipulation library (often needed by TTS)
+# pydub
+
+# # Pinned NumPy version to avoid potential compatibility issues
+# numpy==1.24.4 
+
+# # torch will be installed automatically as a dependency of TTS 
+# # with a compatible version (>=2.1)
 # FastAPI framework and ASGI server
 fastapi
 uvicorn
@@ -11,7 +26,5 @@ pydub
 # Pinned NumPy version REQUIRED by TTS==0.22.0 on Python 3.10
 numpy==1.22.0 
 
-# Explicitly install PyTorch >= 2.1 with CUDA 11.8 support
-# This ensures the GPU version is installed inside the container
-torch==2.1.2+cu118 --index-url https://download.pytorch.org/whl/cu118
-# Note: torchvision/torchaudio are often needed but TTS might install them; add if needed
+# torch will be installed automatically as a dependency of TTS 
+# with a compatible version (>=2.1)
