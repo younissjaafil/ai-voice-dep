@@ -21,6 +21,12 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
+# --- ADD THIS LINE ---
+# Set environment variable to automatically agree to Coqui TTS Terms of Service
+# This prevents the interactive prompt that causes EOFError in Docker
+ENV COQUI_TOS_AGREED=1
+# ---------------------
+
 # Copy the rest of the application code into the container
 COPY . .
 
