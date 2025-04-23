@@ -1,0 +1,15 @@
+# FastAPI framework and ASGI server
+fastapi
+uvicorn
+
+# Coqui TTS library
+TTS==0.22.0 
+
+# Audio manipulation library (often needed by TTS)
+pydub
+
+# Pinned NumPy version to avoid potential compatibility issues
+numpy==1.24.4 
+
+# torch will be installed automatically as a dependency of TTS 
+# with a compatible version (>=2.1)
